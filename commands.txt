@@ -2,3 +2,5 @@ yarn init -y ##create project with clean package.json
 yarn add ##install dependecy
 yarn add -D ##install dev dependecy
 yarn tsc --init ##start typescript config in project (tsconfig.json)
+yarn migration:create -n <name> ## create migration
+yarn migration:run ##run all migrations
