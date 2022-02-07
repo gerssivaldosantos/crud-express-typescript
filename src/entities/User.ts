@@ -4,25 +4,25 @@ import {v4 as uuid} from 'uuid';
 
 @Entity("user")
 export class User {
-    @PrimaryColumn("id")
+    @PrimaryColumn()
     id: string;
 
-    @Column("name")
+    @Column()
     name: string;
 
-    @Column("email")
+    @Column()
     email: string;
 
-    @Column("password")
+    @Column()
     password: string;
 
-    @Column("user_type_id")
+    @Column()
     user_type_id: string;
 
     @ManyToOne(()=> UserType)
     @JoinColumn({name:"user_type_id"})
     category: UserType;
 
-    @CreateDateColumn("created_at")
-    createdAt: Date
+    @CreateDateColumn()
+    created_at: Date
 }

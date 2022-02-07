@@ -3,17 +3,17 @@ import { v4 as uuid } from 'uuid';
 
 @Entity("user_type")
 export class UserType {
-    @PrimaryColumn("id")
+    @PrimaryColumn()
     id: string
 
-    @Column("name")
+    @Column()
     name: string
 
-    @Column("description")
+    @Column()
     description: string
 
-    @CreateDateColumn("created_at")
-    createdAt: Date
+    @CreateDateColumn()
+    created_at: Date
 
     constructor() {
         if (!this.id) {
