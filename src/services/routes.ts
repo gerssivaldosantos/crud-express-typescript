@@ -3,6 +3,6 @@ import { CreateUserTypeController } from "../controllers/CreateUserTypeControlle
 
 const routes = Router();
 
-routes.post("/", new CreateUserTypeController().handle);
+routes.post("/user_type", new CreateUserTypeController().handle);
 
 export { routes }
