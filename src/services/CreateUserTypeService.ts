@@ -10,6 +10,7 @@ export class CreateCategoryService {
         name,
         description
     }: UserTypeRequest): Promise<UserType> {
+        //creating the repositories methods based in my data type
         const repo = getRepository(UserType);
         if (
             //SELECT * FROM user_type WHERE name = 'name' LIMIT 1
