@@ -8,5 +8,8 @@ export class CreateUserTypeController{
         const service = new CreateCategoryService();
 
         const result = await service.execute({name, description})
+        
+        return response.json(result);
+
     }
 }
