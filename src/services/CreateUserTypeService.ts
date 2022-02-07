@@ -11,7 +11,6 @@ export class CreateCategoryService {
         description
     }: UserTypeRequest): Promise<UserType> {
         const repo = getRepository(UserType);
-
         if (
             //SELECT * FROM user_type WHERE name = 'name' LIMIT 1
             await repo.findOne({ name })
@@ -23,7 +22,6 @@ export class CreateCategoryService {
                 name,
                 description,
             })
-
             await repo.save(user_type);
 
             return user_type;
