@@ -5,18 +5,19 @@ type UserTypeRequest = {
     name: string;
     description: string;
 }
-export class CreateCategoryService {
+export class CreateUserTypeService {
     async execute({
         name,
         description
-    }: UserTypeRequest): Promise<UserType> {
+    }: UserTypeRequest): Promise<UserType | Error>{
         //creating the repositories methods based in my data type
         const repo = getRepository(UserType);
         if (
             //SELECT * FROM user_type WHERE name = 'name' LIMIT 1
             await repo.findOne({ name })
         ) {
-            throw new Error('UserType already exists');
+            console.log("UserType already exists");
+            return new Error('UserType already exists');
         }
         else {
             const user_type = repo.create({
