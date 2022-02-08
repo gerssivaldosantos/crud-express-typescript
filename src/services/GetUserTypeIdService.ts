@@ -2,7 +2,7 @@ import { getRepository } from "typeorm";
 import { UserType } from "../entities/UserType";
 
 export class GetUserTypeIdService {
-    public async execute(name): Promise<{}> {
+    public async execute(name:string): Promise<{}> {
         try {
             const user_type_repository = getRepository(UserType);
             const result = await user_type_repository.findOne({

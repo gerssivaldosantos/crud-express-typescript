@@ -2,7 +2,7 @@ import { getRepository } from 'typeorm';
 import { UserType } from '../entities/UserType';
 
 export class DeleteUserTypeService{
-    public async execute(id): Promise<{}> {
+    public async execute(id:string): Promise<{}> {
         try{
             const user_typeRepository = getRepository(UserType);
             await user_typeRepository.delete({id: id});
