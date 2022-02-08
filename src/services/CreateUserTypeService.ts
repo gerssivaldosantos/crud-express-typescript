@@ -13,7 +13,6 @@ export class CreateUserTypeService {
             //SELECT * FROM user_type WHERE name = 'name' LIMIT 1
             await repo.findOne({ name })
         ) {
-            console.log("UserType already exists");
             return new Error('UserType already exists');
         }
         else {

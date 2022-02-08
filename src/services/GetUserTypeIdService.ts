@@ -16,7 +16,6 @@ export class GetUserTypeIdService {
             }
         }
         catch (error) {
-            console.log(error)
             return {
                 status: 404,
                 message: `User type name=${name} not found`,

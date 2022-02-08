@@ -14,7 +14,6 @@ export class DeleteUserTypeService{
             
         }
         catch(error){
-            console.log(error)
             return {
                 status: 404,
                 message: `User type id=${id} not found`,
