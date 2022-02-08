@@ -1,15 +1,12 @@
 import { getRepository } from "typeorm";
 import { UserType } from "../entities/UserType";
+import { UserTypeRequest } from "../models/UserTypeMode";
 
-type UserTypeRequest = {
-    name: string;
-    description: string;
-}
 export class CreateUserTypeService {
     async execute({
         name,
         description
-    }: UserTypeRequest): Promise<{} | Error>{
+    }: UserTypeRequest): Promise<{} | Error> {
         //creating the repositories methods based in my data type
         const repo = getRepository(UserType);
         if (
@@ -29,7 +26,7 @@ export class CreateUserTypeService {
             return {
                 status: 200,
                 message: "UserType created",
-                content:result,
+                content: result,
             }
         }
     }
