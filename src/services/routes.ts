@@ -6,7 +6,7 @@ import { GetAllUserTypeController } from "../controllers/GetAllTypeUserControlle
 const routes = Router();
 
 routes.post("/user_type", new CreateUserTypeController().handle);
-routes.delete("user_type/:id", new DeleteUserTypeController().handle);
+routes.delete("/user_type/:id", new DeleteUserTypeController().handle);
 routes.get("/user_type", new GetAllUserTypeController().handle);
 
 export { routes }
