@@ -8,7 +8,8 @@ export class DeleteUserTypeService{
             await user_typeRepository.delete({id: id});
             return {
                 status: 200,
-                message: `User type id=${id} deleted`
+                message: `User type id=${id} deleted`,
+                content: null,
             }
             
         }
@@ -16,7 +17,8 @@ export class DeleteUserTypeService{
             console.log(error)
             return {
                 status: 404,
-                message: `User type id=${id} not found`
+                message: `User type id=${id} not found`,
+                content: null
             }
         }
 

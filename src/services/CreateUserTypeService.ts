@@ -9,7 +9,7 @@ export class CreateUserTypeService {
     async execute({
         name,
         description
-    }: UserTypeRequest): Promise<UserType | Error>{
+    }: UserTypeRequest): Promise<{} | Error>{
         //creating the repositories methods based in my data type
         const repo = getRepository(UserType);
         if (
@@ -20,13 +20,17 @@ export class CreateUserTypeService {
             return new Error('UserType already exists');
         }
         else {
-            const user_type = repo.create({
+            const result = repo.create({
                 name,
                 description,
             })
-            await repo.save(user_type);
+            await repo.save(result);
 
-            return user_type;
+            return {
+                status: 200,
+                message: "UserType created",
+                content:result,
+            }
         }
     }
 }
