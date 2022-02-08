@@ -4,3 +4,8 @@ export type UserTypeRequest = {
     description: string;
 }
 
+export type UserTypeUpdateRequest = {
+    id: string;
+    name: string;
+    description: string;
+}
