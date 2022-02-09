@@ -1,0 +1,251 @@
+{
+	"info": {
+		"_postman_id": "93ee82da-0719-4709-b311-044bc72e7cff",
+		"name": "users-crud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "UserType",
+			"item": [
+				{
+					"name": "Create user type",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"exist\",\n    \"description\":\"usually user\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/user_type",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"user_type"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all user type",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IiQyYiQxMCRTTUxJYWJheDZRQWJQSUx0MlR3SkpPcXBCMG5scEJ3Qk91TFk3NUJKb1Mxbk51cUFoOTBlZSIsInR5cGUiOiJ1c2VyIiwidXNlck5hbWUiOiJpbmRpYUBpbmRpYS5jb20uYnIiLCJzdWIiOjEsImdvb2dsZUFjY291bnQiOnRydWUsImlhdCI6MTYzNjk4ODYzMywiZXhwIjoxOTUyMzQ4NjMzfQ.Qq7YheTaPl9IPs0dorU-LDQlJ-lkNqXW1trQSzaFl5M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IiQyYiQxMCRrUkJKSEpUNkVpSUx5aEhpNkFCbHMuNUx3QWlLL2QzTm03b2t5L21WWU01bE4vMms4QnZOcSIsInR5cGUiOiJ1c2VyIiwidXNlck5hbWUiOiJhdWdlQGdtYWlsLmNvbSIsImlhdCI6MTYyMDA4OTU3MSwiZXhwIjoxNjIwMTc1OTcxfQ.Q-y-RuJLIwozvdm1xlys3Mi3XM4G-1JEGIcRe2Lt5Y4"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/user_type",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"user_type"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user type",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8085/user_type/write-the-id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"user_type",
+								"write-the-id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Type Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/user_type/<id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"user_type",
+								"<id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User Type",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"admin\",\n    \"description\":\"super user in system, with total power\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/user_type/77d277e5-6bd0-4e02-8762-8b15a46bd6a1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"user_type",
+								"77d277e5-6bd0-4e02-8762-8b15a46bd6a1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create new user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Fábio Akita\",\n    \"email\": \"akitaonrails@gmail.com\",\n    \"password\":\"test\",\n    \"user_type_id\":\"77d277e5-6bd0-4e02-8762-8b15a46bd6a1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Fábio AKita\",\n    \"email\":\"grandeyoda@gmail.com\",\n    \"password\":\"1234\",\n    \"user_type_id\":\"7df23ab9-f945-4945-93f7-80019d45309f\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/user/7badfbcc-31d1-4f71-9f6f-cb23dc21fd80",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"user",
+								"7badfbcc-31d1-4f71-9f6f-cb23dc21fd80"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user by id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
