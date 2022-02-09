@@ -1,6 +1,7 @@
 import { Router } from "express";
 import { CreateUserController } from "../controllers/CreateUserController";
 import { CreateUserTypeController } from "../controllers/CreateUserTypeController";
+import { DeleteUserController } from "../controllers/DeleteUserController";
 import { DeleteUserTypeController } from "../controllers/DeleteUserTypeController";
 import { GetAllUserTypeController } from "../controllers/GetAllTypeUserController";
 import { GetAllUserController } from "../controllers/GetAllUserController";
@@ -15,6 +16,7 @@ const routes = Router();
 routes.post("/user", new CreateUserController().handle);
 routes.get("/user", new GetAllUserController().handle);
 routes.put("/user/:id", new UpdateUserController().handle);
+routes.delete("/user/:id", new DeleteUserController().handle);
 /* Routes for user type */
 routes.post("/user_type", new CreateUserTypeController().handle);
 routes.put("/user_type/:id", new UpdateUserTypeController().handle);
