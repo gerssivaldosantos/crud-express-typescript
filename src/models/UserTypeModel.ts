@@ -9,3 +9,10 @@ export type UserTypeUpdateRequest = {
     name: string;
     description: string;
 }
+
+export type UserRequest = {
+    name: string;
+    email: string;
+    password: string;
+    type: string;
+}
