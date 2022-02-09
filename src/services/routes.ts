@@ -5,6 +5,7 @@ import { DeleteUserTypeController } from "../controllers/DeleteUserTypeControlle
 import { GetAllUserTypeController } from "../controllers/GetAllTypeUserController";
 import { GetAllUserController } from "../controllers/GetAllUserController";
 import { GetUserTypeIdController } from "../controllers/GetUserTypeIdController";
+import { UpdateUserController } from "../controllers/UpdateUserController";
 import { UpdateUserTypeController } from "../controllers/UpdateUserTypeController";
 
 const routes = Router();
@@ -13,6 +14,7 @@ const routes = Router();
 
 routes.post("/user", new CreateUserController().handle);
 routes.get("/user", new GetAllUserController().handle);
+routes.put("/user/:id", new UpdateUserController().handle);
 /* Routes for user type */
 routes.post("/user_type", new CreateUserTypeController().handle);
 routes.put("/user_type/:id", new UpdateUserTypeController().handle);
