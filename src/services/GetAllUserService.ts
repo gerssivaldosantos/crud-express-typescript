@@ -6,7 +6,9 @@ export class GetAllUserService{
     public async execute(): Promise<{}>{
         const user_repository = getRepository(User);
         try{
-            const user = await user_repository.find();
+            const user = await user_repository.find({
+                relations: ["user_type"]
+            });
             return {
                 status: 200,
                 message: "Ok",
