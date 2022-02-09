@@ -21,8 +21,15 @@ export class User {
 
     @ManyToOne(()=> UserType)
     @JoinColumn({name:"user_type_id"})
-    category: UserType;
+    user_type: UserType;
 
     @CreateDateColumn()
-    created_at: Date
+    created_at: Date;
+
+    constructor() {
+        if (!this.id) {
+            this.id = uuid();
+        }
+
+    }
 }
