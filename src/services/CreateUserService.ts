@@ -4,21 +4,22 @@ import { UserType } from "../entities/UserType";
 import { UserRequest } from "../models/UserModel";
 export class CreateUserService{
     public async execute({name, email, password, user_type_id}: UserRequest):Promise<{}>{
-
+        //https://www.npmjs.com/package/express-class-validator
         const user_repository = getRepository(User);
         const type_repository = getRepository(UserType)
 
         try{
-            try{
-                await type_repository.findOne(user_type_id);
-            }
-            catch(error){
+            
+            //search how to configure vscode in debug mode
+            const type_id =    await type_repository.findOne(user_type_id);
+            if (!type_id) {
                 return {
                     status: 404,
-                    message: error.driverError ?? "Anyone not found",
+                    message: "User type not found",
                     content: null
                 }
             }
+          
                 
                 const user = user_repository.create(
                     {   
