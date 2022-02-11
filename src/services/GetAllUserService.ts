@@ -7,6 +7,7 @@ export class GetAllUserService{
         const user_repository = getRepository(User);
         try{
             const user = await user_repository.find({
+                select:["id","email","name", "user_type"],
                 relations: ["user_type"]
             });
             return {
@@ -23,9 +24,5 @@ export class GetAllUserService{
                 content: null
             }
         }
-        
-        
-        return {}
-
     }
 }
