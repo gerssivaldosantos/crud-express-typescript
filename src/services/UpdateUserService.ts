@@ -1,7 +1,7 @@
 import { getRepository } from "typeorm";
 import { User } from "../entities/User";
 import { UserType } from "../entities/UserType";
-import { UserUpdateRequest } from "../models/UserModel";
+import { UserUpdateRequest } from "../dto/UserModel";
 
 
 export class UpdateUserService {

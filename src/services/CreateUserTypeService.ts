@@ -1,6 +1,6 @@
 import { getRepository } from "typeorm";
 import { UserType } from "../entities/UserType";
-import { UserTypeRequest } from "../models/UserTypeModel";
+import { UserTypeRequest } from "../dto/UserTypeModel";
 
 export class CreateUserTypeService {
     async execute({

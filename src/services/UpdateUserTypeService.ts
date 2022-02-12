@@ -1,6 +1,6 @@
 import { getRepository, Repository } from "typeorm";
 import { UserType } from "../entities/UserType";
-import { UserTypeUpdateRequest } from "../models/UserTypeModel";
+import { UserTypeUpdateRequest } from "../dto/UserTypeModel";
 
 export class UpdateUserTypeService {
     async execute({id, name, description}:UserTypeUpdateRequest){

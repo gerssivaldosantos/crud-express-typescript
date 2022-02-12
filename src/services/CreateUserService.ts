@@ -1,7 +1,7 @@
 import { getRepository } from "typeorm";
 import { User } from "../entities/User";
 import { UserType } from "../entities/UserType";
-import { UserRequest } from "../models/UserModel";
+import { UserRequest } from "../dto/UserModel";
 export class CreateUserService{
     public async execute({name, email, password, user_type_id}: UserRequest):Promise<{}>{
         //https://www.npmjs.com/package/express-class-validator

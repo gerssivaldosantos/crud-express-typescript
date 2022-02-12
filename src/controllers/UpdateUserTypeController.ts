@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { UserTypeUpdateRequest } from "../models/UserTypeModel";
+import { UserTypeUpdateRequest } from "../dto/UserTypeModel";
 import { UpdateUserTypeService} from "../services/UpdateUserTypeService";
 
 export class UpdateUserTypeController{
