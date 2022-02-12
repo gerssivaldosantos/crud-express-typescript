@@ -10,6 +10,7 @@
     "typeorm": "ts-node-dev node_modules/.bin/typeorm"
   },
   "dependencies": {
+    "class-validator": "^0.13.2",
     "express": "^4.17.2",
     "pg": "^8.7.3",
     "reflect-metadata": "^0.1.13",
