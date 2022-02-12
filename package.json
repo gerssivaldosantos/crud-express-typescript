@@ -6,6 +6,8 @@
   "author": "gerssivaldosantos <canalandows@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "dev:debug": "ts-node-dev --transpile-only --respawn --inspect=4321 --project tsconfig.json src/server.ts",
+    "dev": "ts-node-dev --transpile-only --respawn --project tsconfig.json src/server.ts",
     "start": "ts-node-dev --transpile-only src/server.ts",
     "typeorm": "ts-node-dev node_modules/.bin/typeorm"
   },
